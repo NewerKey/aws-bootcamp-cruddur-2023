@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import request
+from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import os
 
@@ -25,6 +24,7 @@ cors = CORS(
   methods="OPTIONS,GET,HEAD,POST"
 )
 
+
 @app.route("/api/message_groups", methods=['GET'])
 def data_message_groups():
   user_handle  = 'andrewbrown'
@@ -33,6 +33,7 @@ def data_message_groups():
     return model['errors'], 422
   else:
     return model['data'], 200
+
 
 @app.route("/api/messages/@<string:handle>", methods=['GET'])
 def data_messages(handle):
@@ -45,6 +46,7 @@ def data_messages(handle):
   else:
     return model['data'], 200
   return
+
 
 @app.route("/api/messages", methods=['POST','OPTIONS'])
 @cross_origin()
@@ -60,10 +62,12 @@ def data_create_message():
     return model['data'], 200
   return
 
+
 @app.route("/api/activities/home", methods=['GET'])
 def data_home():
   data = HomeActivities.run()
   return data, 200
+
 
 @app.route("/api/activities/@<string:handle>", methods=['GET'])
 def data_handle(handle):
@@ -72,6 +76,7 @@ def data_handle(handle):
     return model['errors'], 422
   else:
     return model['data'], 200
+
 
 @app.route("/api/activities/search", methods=['GET'])
 def data_search():
@@ -82,6 +87,7 @@ def data_search():
   else:
     return model['data'], 200
   return
+
 
 @app.route("/api/activities", methods=['POST','OPTIONS'])
 @cross_origin()
@@ -96,10 +102,12 @@ def data_activities():
     return model['data'], 200
   return
 
+
 @app.route("/api/activities/<string:activity_uuid>", methods=['GET'])
 def data_show_activity(activity_uuid):
   data = ShowActivity.run(activity_uuid=activity_uuid)
   return data, 200
+
 
 @app.route("/api/activities/<string:activity_uuid>/reply", methods=['POST','OPTIONS'])
 @cross_origin()
@@ -112,6 +120,7 @@ def data_activities_reply(activity_uuid):
   else:
     return model['data'], 200
   return
+
 
 if __name__ == "__main__":
   app.run(debug=True)
