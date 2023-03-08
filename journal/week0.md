@@ -2,6 +2,8 @@
 ### Conceptual Design
 ![Logical Design](https://github.com/NewerKey/aws-bootcamp-cruddur-2023/blob/main/_docs/assets/%5BConceptual%20Design%5DCruddur.jpeg)
 
+[Lucid Chart Share Link](https://lucid.app/lucidchart/invitations/accept/inv_73db15dd-e4e5-41e3-a891-dffecd693ffe)
+
 ### Cloud Infrastructure (Logical Design)
 ![Conceptual Design](https://github.com/NewerKey/aws-bootcamp-cruddur-2023/blob/main/_docs/assets/%5BLogical%20Design%5DCloud%20Infrastructure.jpeg)
 
