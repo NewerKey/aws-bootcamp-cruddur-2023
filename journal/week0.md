@@ -11,6 +11,8 @@
 
 [aws budgets create-budget](https://docs.aws.amazon.com/cli/latest/reference/budgets/create-budget.html)
 
+- [Lucid Chart Share Link](https://lucid.app/lucidchart/4ad90d64-4352-4900-a864-eaa6e8afe428/edit?invitationId=inv_5f18e875-62c4-457f-a42f-8672a509b06c)
+
 You can get your AWS Account ID via CLI
 ```sh
 aws sts get-caller-identity --query Account --output text
