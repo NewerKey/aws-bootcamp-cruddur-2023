@@ -41,6 +41,8 @@ aws budgets create-budget \
 - Choose AWS CLI Access
 - Download the CSV with the credentials
 
+This is the tutorial article I wrote whiles setting my IAM User [Article](https://newerkey.hashnode.dev/create-and-manage-an-iam-useraws)
+
 ### Set Env Vars
 
 Set these credentials for your current terminal or add to a `.env` file without export
